@@ -1,0 +1,68 @@
+<mat-nav-list>
+
+
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="item.routerLink" *ngFor="let item of navList">
+    <mat-icon>{{ item.icon }}</mat-icon>
+    {{ item.content }}
+  </a>
+
+
+  <mat-divider></mat-divider>
+
+</mat-nav-list>
+
+<!-- <mat-nav-list class="sidenav"> 
+        <a mat-list-item>Main</a>
+        <mat-accordion>
+          <mat-expansion-panel class="mat-elevation-z0">
+            <mat-expansion-panel-header
+              collapsedHeight="48px"
+              expandedHeight="48px"
+            >
+              <mat-panel-title>
+                Import
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Dashboard
+              </div>
+            </a>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Data Entry
+              </div>
+            </a>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Reports
+              </div>
+            </a>
+          </mat-expansion-panel>
+          <mat-expansion-panel class="mat-elevation-z0">
+            <mat-expansion-panel-header
+              collapsedHeight="48px"
+              expandedHeight="48px"
+            >
+              <mat-panel-title>
+                Export
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Dashboard
+              </div>
+            </a>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Data Entry
+              </div>
+            </a>
+            <a mat-list-item>
+              <div class="sublist-1">
+                Reports
+              </div>
+            </a>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-nav-list> -->

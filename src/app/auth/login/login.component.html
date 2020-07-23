@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Krishya Admin</title>
+	
+</head>
+<body>
+
+<div class="signupform">
+	<div class="container">
+		<!-- main content -->
+		<div class="agile_info">
+			<div class="w3l_form">
+				<div class="left_grid_info">
+					<h1>Krishya Logistics LLP</h1>
+					<!-- <p>Customer Details </p> -->
+					<img src="assets/images/admin.jpg" alt="" />
+				</div>
+			</div>
+			<div class="w3_info">
+				<h2>Krishya Admin</h2>
+				<p>Enter your details to login</p>
+				<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+					<label>Email Address</label>
+					<div class="input-group">
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+					</div>
+					<label>Password</label>
+					<div class="input-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+					</div> 
+					<!-- <div class="login-check">
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Remember me</label>
+					</div>						 -->
+						<button class="btn btn-danger btn-block" type="submit">Login</button >  
+						<!-- <button type="submit" class="btn btn-success" >Login</button>               -->
+				</form>
+				<!-- <p class="account">By clicking login, you agree to our <a href="#">Terms & Conditions!</a></p> -->
+				<!-- <p class="account1">Dont have an account? <a href="registeration">Register here</a></p> -->
+			</div>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- <app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+<mat-drawer-container>
+    <mat-drawer mode="over" [opened]="sideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container> -->
+
+<!-- <app-footer></app-footer> -->
+
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+    <app-header class="example-mat-toolbar" (toggleSideBarForMe)="sideBarToggler()"></app-header>
+    <mat-sidenav-container
+      class="sidenav-container"
+      [style.marginTop.px]="mobileQuery.matches ? 0 : 0"
+    >
+      <!-- <mat-sidenav
+        #snav [opened]="sideBarOpen"
+        [mode]="mobileQuery.matches ? 'over' : 'side'"
+        [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="56"
+        class="mat-elevation-z2"
+      > -->
+      <!-- <app-sidebar></app-sidebar> -->
+      <!-- </mat-sidenav> -->
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  

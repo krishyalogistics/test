@@ -1,0 +1,66 @@
+<mat-card class="example-card">
+<div fxLayout="column"  class="krl-row"  [ngClass.xs]="'components-container-xs'"  fxLayoutGap="20px">
+  <div fxFlex class="krl-col" fxLayoutGap="20px">
+    <mat-card-content>
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <span class="fill-remaining-space">Hello , {{userDisplayName}}</span>
+          <span class="spacer"></span>
+
+        </mat-toolbar-row>
+      </mat-toolbar>
+   
+    <div>
+      <mat-card>
+        <div class="table-container mat-elevation-z8">
+          <table
+            mat-table
+            id="ExampleTable"
+            [dataSource]="dataSource"
+            class="table"
+            matSort
+          >
+          
+            <ng-container
+              *ngFor="let column of AllColumns"
+              [matColumnDef]="column.name"
+            >
+              <th mat-header-cell class="header-cell" *matHeaderCellDef>
+                {{ column.displayname }}
+              </th>
+              <td mat-cell class="cell" *matCellDef="let element">
+                {{ column.cell(element) }}
+              </td>
+            </ng-container>
+         
+            <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-icon-button color="warn">
+                      <mat-icon >delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+            <tr
+              mat-header-row
+              class="header-row"
+              *matHeaderRowDef="displayedColumns"
+            ></tr>
+            <tr
+              mat-row
+              class="row"
+              *matRowDef="let row; columns: displayedColumns"
+            ></tr>
+          </table>
+
+        </div>
+      </mat-card>
+    </div>
+
+  
+   
+  </mat-card-content>
+</div>
+</div>
+</mat-card>
